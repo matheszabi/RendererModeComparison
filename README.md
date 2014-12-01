@@ -6,8 +6,8 @@ I took out the drawing method body, so on that case is nothing to draw but must 
 Then I made my code "nice" as how we learn in university and as how in many job interview is asking and the IT Architects would like to see it.
 Unbelieable, but my fps became 30-31 - from 62. So make sure you use ?Iinterfaces and abstract classes everywhere, hehe, and let me just code "plain" and fast running stuff.
 
-No  Iam sharing the code, to see you too.
-- Without inheritance 
+Now I am sharing the code, to see you too, -othervise you won't believe it.
+- one implementation it is without inheritance ( as how it was at beginning )
 Declaring an abstract class and having 2 implementation: 
 - one is the same code for rendering as without inheritance and 
 - other is the empty method of the draw.
