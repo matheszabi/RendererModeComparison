@@ -14,9 +14,10 @@ Declaring an abstract class and having 2 implementation:
 
 This also reveals the canvas.drawBitmap(curBitmap, null, dst, null); it is very fast
 
-
+![ScreenShot](https://cloud.githubusercontent.com/assets/506560/5248060/7d8d04b6-7980-11e4-8c2e-e710b14daf8c.png)
 
 The rendering task it is simple:
 Similates 3 sprite frame animations with 10 keystames.
 Now they are 3 digits and the numbers are some .png files.
 
+![ScreenShot](https://cloud.githubusercontent.com/assets/506560/5248061/7d8eb86a-7980-11e4-8fc2-76867646f52e.png)
