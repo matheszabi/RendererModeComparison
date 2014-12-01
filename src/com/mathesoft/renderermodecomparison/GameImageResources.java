@@ -73,11 +73,11 @@ public class GameImageResources {
 		// int spriteHeight = bitmap0.getHeight();
 		
 		float witdthForSpaces = (float) screenWidth - ((Settings.spritesToRender) * digitsWidth);
-		int spiteSpaceWidth = (int) (witdthForSpaces / spacesCount);
-		Log.e("GameImageResources", "DEBUG_WITH_RED: spiteSpaceWidth : " + spiteSpaceWidth);
+		int spriteSpaceWidth = (int) (witdthForSpaces / spacesCount);
+		Log.e("GameImageResources", "DEBUG_WITH_RED: spiteSpaceWidth : " + spriteSpaceWidth);
 
 		for (int i = 0; i < digitsPosX.length; i++) {
-			digitsPosX[i] = spiteSpaceWidth + i * (spiteSpaceWidth + spriteWidth);// 134,355,576
+			digitsPosX[i] = spriteSpaceWidth + i * (spriteSpaceWidth + spriteWidth);// 134,355,576
 			Log.e("GameImageResources", "DEBUG_WITH_RED: digitsPosX[" + i + "] : " + digitsPosX[i]);
 		}
 	}
