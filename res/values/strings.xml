@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Renderer Mode Comparison</string>
+    <string name="title">Renderer Mode Comparison</string>
+    
+    <string name="Result">Result: </string>
+    
+    <string name="Canvas2DNoInheritance">Canvas 2D No Inheritance</string>
+    <string name="Canvas2DSdk">Canvas 2D SDK</string>
+    <string name="Canvas2DEmpty">Canvas 2D Empty</string>
+    
+    
+    
+    
+
+</resources>
