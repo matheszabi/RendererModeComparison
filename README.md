@@ -1,6 +1,6 @@
 RendererModeComparison
 ======================
-I wanted to compare a few renderer mode for a game loot thread in Android.
+I wanted to compare a few renderer mode for a game loop thread, in Android.
 Once I have implemnted the "classic" SDK mode with canvas. On most of my devices gave me around 60 fps.
 I took out the drawing method body, so on that case is nothing to draw but must be the fastest method with highest fps. It didn't change a lot.
 Then I made my code "nice" as how we learn in university and as how in many job interview is asking and the IT Architects would like to see it.
