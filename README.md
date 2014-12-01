@@ -12,7 +12,7 @@ Declaring an abstract class and having 2 implementation:
 - one is the same code for rendering as without inheritance and 
 - other is the empty method of the draw.
 
-This also reveals the canvas.drawBitmap(curBitmap, null, dst, null); it is very fast
+This also reveals the canvas.drawBitmap ```(curBitmap, null, dst, null);``` it is very fast!
 
 ![ScreenShot](https://cloud.githubusercontent.com/assets/506560/5248060/7d8d04b6-7980-11e4-8c2e-e710b14daf8c.png)
 
