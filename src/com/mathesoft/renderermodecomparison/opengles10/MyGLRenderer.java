@@ -61,7 +61,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 		int[] maxTextureSize = new int[1];// 2048, 4096
 		GLES10.glGetIntegerv(GL10.GL_MAX_TEXTURE_SIZE, maxTextureSize, 0);
 
-		Log.e("opengles10.MyGLRenderer", "DEBUG_WITH_RED: maxTextureSize: " + maxTextureSize[0] );
+		//Log.e("opengles10.MyGLRenderer", "DEBUG_WITH_RED: maxTextureSize: " + maxTextureSize[0] );
 
 		// loadGLTexture
 		

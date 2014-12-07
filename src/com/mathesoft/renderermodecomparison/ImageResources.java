@@ -87,7 +87,7 @@ public class ImageResources {
 		digitsHeight = spriteLocicalHeight;// 182 (437)
 		digitsWidth = spriteLogicalWidth;// 160 (387)
 
-		Log.e("ImageResources", "DEBUG_WITH_RED: digitsWidth : " + digitsWidth + ", digitsHeight : " + digitsHeight);// 160, 182 (384,437)
+		//Log.e("ImageResources", "DEBUG_WITH_RED: digitsWidth : " + digitsWidth + ", digitsHeight : " + digitsHeight);// 160, 182 (384,437)
 
 		for (int i = 0; i < resourceIds.length; i++) {
 			Bitmap bmpRaw = BitmapFactory.decodeResource(context.getResources(), resourceIds[i]);
