@@ -9,6 +9,8 @@
     <string name="Canvas2DNoInheritance">Canvas 2D No Inheritance</string>
     <string name="Canvas2DSdk">Canvas 2D SDK</string>
     <string name="Canvas2DEmpty">Canvas 2D Empty</string>
+    <string name="OpenGL10">Open GL 1.0 / 1.1</string>
+    <string name="OpenGL10Empty">Open GL 1.0 / 1.1 Empty</string>
     
     
     

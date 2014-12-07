@@ -5,7 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 
-import com.mathesoft.renderermodecomparison.GameImageResources;
+import com.mathesoft.renderermodecomparison.ImageResources;
 import com.mathesoft.renderermodecomparison.Settings;
 import com.mathesoft.renderermodecomparison.game.AbstractGameView;
 
@@ -23,8 +23,8 @@ public class GameView extends AbstractGameView {
 			int currentDigitValue = frameIndex % 10;// 0...9
 			frameIndex /= 10;// move it to next digit.
 
-			int posX = GameImageResources.digitsPosX[i];
-			Bitmap curBitmap = GameImageResources.digits[currentDigitValue];
+			int posX = ImageResources.digitsPosX[i];
+			Bitmap curBitmap = ImageResources.digits[currentDigitValue];
 
 			int posY = (int) ((canvas.getHeight() + curBitmap.getHeight()) / 2) - curBitmap.getHeight();
 

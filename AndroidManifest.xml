@@ -8,6 +8,12 @@
         android:minSdkVersion="15"
         android:targetSdkVersion="19" />
 
+    <!-- Tell the system this app requires OpenGL ES 1.0 or higher -->
+    <uses-feature android:glEsVersion="0x00010000" />
+
+    <!-- just for saving the opengl atlas to sdcard -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -33,7 +39,13 @@
         <activity
             android:name=".canvas2dempty.Canvas2DSdkEmptyActivity"
             android:screenOrientation="sensorLandscape" />
-        
+        <!-- OpenGL ES 1.0 / 1.1 -->
+        <activity
+            android:name=".opengles10.OpenGLES10Activity"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".opengles10empty.OpenGLES10EmptyActivity"
+            android:screenOrientation="sensorLandscape" />
     </application>
 
 </manifest>

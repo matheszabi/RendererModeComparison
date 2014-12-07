@@ -1,6 +1,6 @@
 package com.mathesoft.renderermodecomparison.canvas2dnoinheritance;
 
-import com.mathesoft.renderermodecomparison.GameImageResources;
+import com.mathesoft.renderermodecomparison.ImageResources;
 import com.mathesoft.renderermodecomparison.Settings;
 
 import android.content.Context;
@@ -35,16 +35,15 @@ public class GameView extends SurfaceView {
 	// Called from GameLoopThread
 	public void draw(Canvas canvas, int frameIndex) {
 		 
-		
-		// Move it to NDK
+	
 		canvas.drawColor(Color.BLACK);
 		for (int i = Settings.spritesToRender - 1; i >= 0; i--) {// i = 2, 1, 0
 			
 			int currentDigitValue = frameIndex % 10;// 0...9
 			frameIndex /= 10;// move it to next digit.
 
-			int posX = GameImageResources.digitsPosX[i];
-			Bitmap curBitmap = GameImageResources.digits[currentDigitValue];
+			int posX = ImageResources.digitsPosX[i];
+			Bitmap curBitmap = ImageResources.digits[currentDigitValue];
 
 			int posY = (int) ((canvas.getHeight() + curBitmap.getHeight()) / 2) - curBitmap.getHeight();
 

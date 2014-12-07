@@ -1,94 +1,148 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="${relativePackage}.${activityClass}" >
 
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="14dp"
-        android:text="@string/title" />
-
-    <!-- Canvas 2D No Inheritance -->
-
-    <Button
-        android:id="@+id/btCanvas2DNoInheritance"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="18dp"
-        android:onClick="btCanvas2D_no_inheritance_clicked"
-        android:layout_below="@+id/tvTitle"
-        android:text="@string/Canvas2DNoInheritance"
-        tools:ignore="RtlHardcoded" />
-
-    <TextView
-        android:id="@+id/tvCanvas2DNoInheritanceResult"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/btCanvas2DNoInheritance"
-        android:layout_alignTop="@+id/btCanvas2DNoInheritance"
-        android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@+id/btCanvas2DNoInheritance"
-        android:gravity="center_vertical"
-        android:text="@string/Result"
-        tools:ignore="RtlHardcoded" />
-    
-    
-    <!-- Canvas 2D SDK -->
+        android:layout_height="wrap_content" >
 
-    <Button
-        android:id="@+id/btCanvas2DSdk"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="18dp"
-        android:onClick="btCanvas2D_sdk_clicked"
-        android:layout_below="@+id/btCanvas2DNoInheritance"
-        android:text="@string/Canvas2DSdk"
-        tools:ignore="RtlHardcoded" />
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:text="@string/title" />
 
-    <TextView
-        android:id="@+id/tvCanvas2DSdkResult"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/btCanvas2DSdk"
-        android:layout_alignTop="@+id/btCanvas2DSdk"
-        android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@+id/btCanvas2DSdk"
-        android:gravity="center_vertical"
-        android:text="@string/Result"
-        tools:ignore="RtlHardcoded" />
-    
-    
-    <!-- Canvas 2D Empty -->
+        <!-- Canvas 2D No Inheritance -->
 
-    <Button
-        android:id="@+id/btCanvas2DEmpty"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="18dp"
-        android:onClick="btCanvas2D_empty_clicked"
-        android:layout_below="@+id/btCanvas2DSdk"
-        android:text="@string/Canvas2DEmpty"
-        tools:ignore="RtlHardcoded" />
+        <Button
+            android:id="@+id/btCanvas2DNoInheritance"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tvTitle"
+            android:layout_marginTop="18dp"
+            android:onClick="btCanvas2D_no_inheritance_clicked"
+            android:text="@string/Canvas2DNoInheritance"
+            tools:ignore="RtlHardcoded" />
 
-    <TextView
-        android:id="@+id/tvCanvas2DEmptyResult"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/btCanvas2DEmpty"
-        android:layout_alignTop="@+id/btCanvas2DEmpty"
-        android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@+id/btCanvas2DEmpty"
-        android:gravity="center_vertical"
-        android:text="@string/Result"
-        tools:ignore="RtlHardcoded" />
-    
+        <TextView
+            android:id="@+id/tvCanvas2DNoInheritanceResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btCanvas2DNoInheritance"
+            android:layout_alignTop="@+id/btCanvas2DNoInheritance"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/btCanvas2DNoInheritance"
+            android:gravity="center_vertical"
+            android:text="@string/Result"
+            tools:ignore="RtlHardcoded" />
 
-</RelativeLayout>
+        <!-- Canvas 2D SDK -->
+
+        <Button
+            android:id="@+id/btCanvas2DSdk"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/btCanvas2DNoInheritance"
+            android:layout_marginTop="18dp"
+            android:onClick="btCanvas2D_sdk_clicked"
+            android:text="@string/Canvas2DSdk"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/tvCanvas2DSdkResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btCanvas2DSdk"
+            android:layout_alignTop="@+id/btCanvas2DSdk"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/btCanvas2DSdk"
+            android:gravity="center_vertical"
+            android:text="@string/Result"
+            tools:ignore="RtlHardcoded" />
+
+        <!-- Canvas 2D Empty -->
+
+        <Button
+            android:id="@+id/btCanvas2DEmpty"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/btCanvas2DSdk"
+            android:layout_marginTop="18dp"
+            android:onClick="btCanvas2D_empty_clicked"
+            android:text="@string/Canvas2DEmpty"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/tvCanvas2DEmptyResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btCanvas2DEmpty"
+            android:layout_alignTop="@+id/btCanvas2DEmpty"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/btCanvas2DEmpty"
+            android:gravity="center_vertical"
+            android:text="@string/Result"
+            tools:ignore="RtlHardcoded" />
+
+        <!-- OpenGL ES 1.0 / 1.1 -->
+
+        <Button
+            android:id="@+id/btOpenGL10"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/btCanvas2DEmpty"
+            android:layout_marginTop="18dp"
+            android:onClick="btOpenGL10_clicked"
+            android:text="@string/OpenGL10"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/tvOpenGL10Result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btOpenGL10"
+            android:layout_alignTop="@+id/btOpenGL10"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/btOpenGL10"
+            android:gravity="center_vertical"
+            android:text="@string/Result"
+            tools:ignore="RtlHardcoded" />
+        
+        <!-- OpenGL ES 1.0 / 1.1 Empty -->
+        
+        <Button
+            android:id="@+id/btOpenGL10Empty"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/btOpenGL10"
+            android:layout_marginTop="18dp"
+            android:onClick="btOpenGL10Empty_clicked"
+            android:text="@string/OpenGL10Empty"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/tvOpenGL10EmptyResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btOpenGL10Empty"
+            android:layout_alignTop="@+id/btOpenGL10Empty"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/btOpenGL10Empty"
+            android:gravity="center_vertical"
+            android:text="@string/Result"
+            tools:ignore="RtlHardcoded" />
+        
+    </RelativeLayout>
+
+</ScrollView>

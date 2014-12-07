@@ -14,6 +14,8 @@ import android.widget.TextView;
 import com.mathesoft.renderermodecomparison.canvas2dempty.Canvas2DSdkEmptyActivity;
 import com.mathesoft.renderermodecomparison.canvas2dnoinheritance.Canvas2DNoInheritanceActivity;
 import com.mathesoft.renderermodecomparison.canvas2dsdk.Canvas2DSdkActivity;
+import com.mathesoft.renderermodecomparison.opengles10.OpenGLES10Activity;
+import com.mathesoft.renderermodecomparison.opengles10empty.OpenGLES10EmptyActivity;
 
 public class MainActivity extends Activity {
 
@@ -50,6 +52,18 @@ public class MainActivity extends Activity {
 		startActivity(intent);
 	}
 
+	public void btOpenGL10_clicked(View view) {
+		Log.d(getClass().getSimpleName(), "btOpenGL10_clicked");
+		Intent intent = new Intent(this, OpenGLES10Activity.class);
+		startActivity(intent);
+	}
+
+	public void btOpenGL10Empty_clicked(View view) {
+		Log.d(getClass().getSimpleName(), "btOpenGL10Empty_clicked");
+		Intent intent = new Intent(this, OpenGLES10EmptyActivity.class);
+		startActivity(intent);
+	}
+
 	@Override
 	protected void onResume() {
 		super.onResume();
@@ -60,23 +74,26 @@ public class MainActivity extends Activity {
 		Context appContext = getApplicationContext();
 		SharedPreferences sharedPreferences = appContext.getSharedPreferences(Settings.SHARED_REFERENCES_NAME, MODE_PRIVATE);
 
-		// 2D No inheritance
-		long canvas2NoInheritanceResultMillisec = sharedPreferences.getLong(Settings.PREF_KEY_CANVAS2D_NO_INHERITANCE_MILLISEC, -1L);
-		int canvas2DNoInheritanceResultFps = sharedPreferences.getInt(Settings.PREF_KEY_CANVAS2D_NO_INHERITANCE_FPS, -1);
-		TextView tvCanvas2DNoInheritanceResult = (TextView) findViewById(R.id.tvCanvas2DNoInheritanceResult);
-		displayResultFor(canvas2NoInheritanceResultMillisec, canvas2DNoInheritanceResultFps, tvCanvas2DNoInheritanceResult);
+		String[] millisecKeys = new String[] { Settings.PREF_KEY_CANVAS2D_NO_INHERITANCE_MILLISEC, Settings.PREF_KEY_CANVAS2DSDK_MILLISEC,
+				Settings.PREF_KEY_CANVAS2DSDK_EMPTY_MILLISEC, Settings.PREF_KEY_OPENGL_10_MILLISEC, Settings.PREF_KEY_OPENGL_10_EMPTY_MILLISEC };
+		
+		String[] fpsKeys = new String[] { Settings.PREF_KEY_CANVAS2D_NO_INHERITANCE_FPS, Settings.PREF_KEY_CANVAS2DSDK_FPS,
+				Settings.PREF_KEY_CANVAS2DSDK_EMPTY_FPS, Settings.PREF_KEY_OPENGL_10_FPS, Settings.PREF_KEY_OPENGL_10_EMPTY_FPS };
+		
+		int[] textfieldsId = new int[] { R.id.tvCanvas2DNoInheritanceResult, R.id.tvCanvas2DSdkResult, R.id.tvCanvas2DEmptyResult, R.id.tvOpenGL10Result,
+				R.id.tvOpenGL10EmptyResult };
 
-		// 2D SDK
-		long canvas2DSdkResultMillisec = sharedPreferences.getLong(Settings.PREF_KEY_CANVAS2DSDK_MILLISEC, -1L);
-		int canvas2DSdkResultFps = sharedPreferences.getInt(Settings.PREF_KEY_CANVAS2DSDK_FPS, -1);
-		TextView tvCanvas2DSdkResult = (TextView) findViewById(R.id.tvCanvas2DSdkResult);
-		displayResultFor(canvas2DSdkResultMillisec, canvas2DSdkResultFps, tvCanvas2DSdkResult);
+		for (int i = 0; i < millisecKeys.length; i++) {
+			String millisecKey = millisecKeys[i];
+			String fpsKey = fpsKeys[i];
+			int textFieldId = textfieldsId[i];
 
-		// 2D Empty
-		long canvas2DEmptyResultMillisec = sharedPreferences.getLong(Settings.PREF_KEY_CANVAS2DSDK_EMPTY_MILLISEC, -1L);
-		int canvas2DEmptyResultFps = sharedPreferences.getInt(Settings.PREF_KEY_CANVAS2DSDK_EMPTY_FPS, -1);
-		TextView tvCanvas2DEmptyResult = (TextView) findViewById(R.id.tvCanvas2DEmptyResult);
-		displayResultFor(canvas2DEmptyResultMillisec, canvas2DEmptyResultFps, tvCanvas2DEmptyResult);
+			long millisecValue = sharedPreferences.getLong(millisecKey, -1L);
+			int fpsValue = sharedPreferences.getInt(fpsKey, -1);
+			TextView textView = (TextView) findViewById(textFieldId);
+
+			displayResultFor(millisecValue, fpsValue, textView);
+		}
 
 	}
 

@@ -4,7 +4,7 @@ import android.content.Context;
 import android.view.SurfaceHolder;
 import android.view.SurfaceHolder.Callback;
 
-import com.mathesoft.renderermodecomparison.GameImageResources;
+import com.mathesoft.renderermodecomparison.ImageResources;
 
 public class SurfaceHolderCallbackImpl implements Callback {
 
@@ -23,7 +23,7 @@ public class SurfaceHolderCallbackImpl implements Callback {
 		//Log.d("SurfaceHolderCallbackImpl", "surfaceChanged");
 
 		Context context = gameLoopThread.getGameView().getContext();
-		GameImageResources.initImages(context, width, height);
+		ImageResources.initImages(context, width, height);
 
 		// start the game:
 		gameLoopThread.setRunning(true);
