@@ -24,15 +24,10 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 	private int framesCount;
 	private long start;
 
-	// private int width;
-	// private int height;
 
 	private int[] textures = new int[1];
 
-	// private ArrayList<Float> vertexCoords = new ArrayList<Float>(); // Positions of vertexCoords
-	// private ArrayList<Short> indices = new ArrayList<Short>(); // Which verts go together to form Ele's
-	// private ArrayList<Float> textureCoords = new ArrayList<Float>(); // Texture map coordinates
-	//
+
 
 	public MyGLRenderer(Context context) {
 		this.context = context;
@@ -148,10 +143,9 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 			FloatBuffer vertexBuffer = vbb.asFloatBuffer();
 			vertexBuffer.put(vertices);
 			vertexBuffer.position(0);
+					
 			
-			
-			
-			Log.e("MyGLRenderer", "currentDigitValue: "+currentDigitValue + ", i: "+i);
+			//Log.e("MyGLRenderer", "currentDigitValue: "+currentDigitValue + ", i: "+i);
 			// Point to our vertex buffer
 			// Specifies the location and data format of the array of vertex coordinates to use when rendering.
 			gl.glVertexPointer(3, GL10.GL_FLOAT, 0, vertexBuffer);
